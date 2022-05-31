@@ -1,0 +1,10 @@
+digraph G{
+  rankdir = LR;
+  node [shape = none]; start;
+  node [shape = circle]; q1;
+  node [shape = doublecircle]; q2;
+  start -> q1;
+  q1 -> q2 [label = "c"];
+  q1 -> q1 [label = "a, b"];
+  q2 -> q2 [label = "a, b"];
+}

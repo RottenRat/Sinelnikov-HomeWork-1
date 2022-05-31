@@ -1,0 +1,62 @@
+digraph G{
+  rankdir = LR;
+  node [shape = none]; start;
+  node [shape = circle]; q1t1 q1t2 q1t3 q1t4 q1t5 q1t6 q2t1 q2t2 q2t3 q2t4 q2t5 q2t6 q3t1 q3t2 q3t3 q3t4 q3t5 q3t6 q4t1;
+  node [shape = doublecircle]; q4t2 q4t3 q4t4 q4t5 q4t6;
+  start -> q1t1;
+  q1t1 -> q2t4 [label = "a"];
+  q1t2 -> q2t5 [label = "a"];
+  q1t3 -> q2t6 [label = "a"];
+  q1t4 -> q2t1 [label = "a"];
+  q1t5 -> q2t2 [label = "a"];
+  q1t6 -> q2t3 [label = "a"];
+
+  q1t1 -> q2t2 [label = "b"];
+  q1t2 -> q2t3 [label = "b"];
+  q1t3 -> q2t1 [label = "b"];
+  q1t4 -> q2t5 [label = "b"];
+  q1t5 -> q2t6 [label = "b"];
+  q1t6 -> q2t4 [label = "b"];
+
+  q2t1 -> q3t4 [label = "a"];
+  q2t2 -> q3t5 [label = "a"];
+  q2t3 -> q3t6 [label = "a"];
+  q2t4 -> q3t1 [label = "a"];
+  q2t5 -> q3t2 [label = "a"];
+  q2t6 -> q3t3 [label = "a"];
+
+  q2t1 -> q3t2 [label = "b"];
+  q2t2 -> q3t3 [label = "b"];
+  q2t3 -> q3t1 [label = "b"];
+  q2t4 -> q3t5 [label = "b"];
+  q2t5 -> q3t6 [label = "b"];
+  q2t6 -> q3t4 [label = "b"];
+
+  q3t1 -> q4t4 [label = "a"];
+  q3t2 -> q4t5 [label = "a"];
+  q3t3 -> q4t6 [label = "a"];
+  q3t4 -> q4t1 [label = "a"];
+  q3t5 -> q4t2 [label = "a"];
+  q3t6 -> q4t3 [label = "a"];
+
+  q3t1 -> q4t2 [label = "b"];
+  q3t2 -> q4t3 [label = "b"];
+  q3t3 -> q4t1 [label = "b"];
+  q3t4 -> q4t5 [label = "b"];
+  q3t5 -> q4t6 [label = "b"];
+  q3t6 -> q4t4 [label = "b"];
+
+  q4t1 -> q4t4 [label = "a"];
+  q4t2 -> q4t5 [label = "a"];
+  q4t3 -> q4t6 [label = "a"];
+  q4t4 -> q4t1 [label = "a"];
+  q4t5 -> q4t2 [label = "a"];
+  q4t6 -> q4t3 [label = "a"];
+
+  q4t1 -> q4t2 [label = "b"];
+  q4t2 -> q4t3 [label = "b"];
+  q4t3 -> q4t1 [label = "b"];
+  q4t4 -> q4t5 [label = "b"];
+  q4t5 -> q4t6 [label = "b"];
+  q4t6 -> q4t4 [label = "b"];
+}

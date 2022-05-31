@@ -1,0 +1,12 @@
+digraph G{
+  rankdir = LR;
+  node [shape = none]; start;
+  node [shape = circle]; q1 q4;
+  node [shape = doublecircle]; "{q2q8, q6q8, q6}" "{q3q7, q5}";
+  start -> q1;
+  q1 -> "{q2q8, q6q8, q6}" [label = "a"];
+  "{q2q8, q6q8, q6}" -> "{q3q7, q5}" [label = "a"];
+  "{q3q7, q5}" -> "{q2q8, q6q8, q6}" [label = "b"];
+  "{q3q7, q5}" -> q4 [label = "a"];
+  q4 -> "{q3q7, q5}" [label = "b"];
+}
